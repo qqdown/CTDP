@@ -1,10 +1,8 @@
-#Chinese-Text-Data-Processing
-Data Mining作业
-<<<<<<< HEAD
-
+Chinese-Text-Data-Processing
 =======
->>>>>>> 51f4fd0bfc9cf79de13546e1f3033b7a2a6050e0
-一、当前功能
+
+##一、当前功能
+
 1、将文件夹中所有的txt文件中的内容，按行读取，每一行作为一个post，对每一个post以所有txt中的内容作为全体计算tf-idf，输出为与原始txt及每一行对应的tf-idf。由于结果包含大量的0，所以采取了稀疏矩阵的存储方式。
 
-二、
+##二、
