@@ -94,25 +94,14 @@ public class TFIDF
 		for(int i=0; i<fileList.size(); i++)
 		{
 			TFile file = fileList.get(i);
-<<<<<<< HEAD
-			//int wordsSize = file.getWordsSize();
-=======
-			int wordsSize = file.getWordsSize();
->>>>>>> 51f4fd0bfc9cf79de13546e1f3033b7a2a6050e0
 			HashMap<TWord, Integer> TCMap = TCMapList.get(i);
 
 			for(TWord word : file.getWords())
 			{
 				Integer tc = TCMap.get(word);
-<<<<<<< HEAD
 				double TF = tc*1.0;
 				double IDF = Math.log10(fileList.size()*1.0/TDMap.get(word).size());//¼ÆËãIDF
 				word.TFIDF = TF*IDF;
-=======
-				double TD = tc*1.0/wordsSize;
-				double IDF = Math.log10(fileList.size()*1.0/TDMap.get(word).size());//¼ÆËãIDF
-				word.TFIDF = TD*IDF;
->>>>>>> 51f4fd0bfc9cf79de13546e1f3033b7a2a6050e0
 			}
 		}
 		
