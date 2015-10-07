@@ -92,13 +92,24 @@ public class Main {
 				
 				FileWriter fw = new FileWriter(file.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
+<<<<<<< HEAD
 				for(TFile tf : files)
 				{	
+=======
+				int lineNumber = 0;
+				for(TFile tf : files)
+				{	
+					bw.write("line " + (lineNumber+1) + ":");
+>>>>>>> 51f4fd0bfc9cf79de13546e1f3033b7a2a6050e0
 					for(SparseMatrixElement e : tf.smeList)
 					{
 						bw.write(e.toString() + " ");
 					}
 					bw.newLine();
+<<<<<<< HEAD
+=======
+					lineNumber++;
+>>>>>>> 51f4fd0bfc9cf79de13546e1f3033b7a2a6050e0
 				}
 				bw.close();
 			}
