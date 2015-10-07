@@ -92,16 +92,13 @@ public class Main {
 				
 				FileWriter fw = new FileWriter(file.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
-				int lineNumber = 0;
 				for(TFile tf : files)
 				{	
-					bw.write("line " + (lineNumber+1) + ":");
 					for(SparseMatrixElement e : tf.smeList)
 					{
 						bw.write(e.toString() + " ");
 					}
 					bw.newLine();
-					lineNumber++;
 				}
 				bw.close();
 			}
