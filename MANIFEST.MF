@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.dataprocess.Main
+Class-Path: lib/ddmlib.jar lib/IKAnalyzer2012_u6.jar

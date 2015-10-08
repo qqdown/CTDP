@@ -29,10 +29,11 @@ public class TFIDF
 		fileList.add(file);		
 	}
 	
-	public void Calculate()
+	public void calculate()
 	{
 		Set<TWord> words = TCalculate(fileList);
 		List<TWord> wL = new ArrayList<TWord>(words);
+		//以稀疏矩阵的形式输出
 		for(int i=0; i<fileList.size(); i++)
 		{
 			TFile f = fileList.get(i);
@@ -41,7 +42,7 @@ public class TFIDF
 			for(int j=0; j<words.size(); j++)
 			{
 				double dfitf = f.getTFIDF(wL.get(j).content);
-				if(dfitf >= 0.00001)
+				if(dfitf >= 0.00001)//认为小于0.00001为0
 				{
 					smeList.add(new SparseMatrixElement(i,j,dfitf));
 				}
@@ -49,6 +50,7 @@ public class TFIDF
 		}
 	}
 	
+	//计算出每个单词的TF-IDF
 	public static Set<TWord> TCalculate(List<TFile> fileList)
 	{
 		List<HashMap<TWord, Integer>> TCMapList = new ArrayList<HashMap<TWord, Integer>>();
